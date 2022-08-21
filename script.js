@@ -1,4 +1,7 @@
-const gridSize = 16;
+function main() {
+   const gridSizeButton = document.querySelector("#set-grid-size");
+   gridSizeButton.addEventListener("click", promptGridSize);
+}
 
 function drawGrid(size = 16) {
    const gridContainer = document.querySelector("#container");
@@ -13,3 +16,5 @@ function drawGrid(size = 16) {
       });
    }
 }
+
+main();
