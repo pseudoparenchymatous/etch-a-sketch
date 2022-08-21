@@ -1,6 +1,6 @@
 const gridSize = 16;
 
-function drawGrid(size) {
+function drawGrid(size = 16) {
    const gridContainer = document.querySelector("#container");
 
    for (let i = 0; i < size * size; i++) {
