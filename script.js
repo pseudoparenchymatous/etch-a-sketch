@@ -6,6 +6,7 @@ function main() {
       gridSize = Number(window.prompt("Grid size (max 100)", ""));
       if (gridSize > 100) gridSize = 100;
       if (gridSize < 1) gridSize = 1;
+      if (isNaN(gridSize)) gridSize = 16;
 
       drawGrid(gridSize);
    });
