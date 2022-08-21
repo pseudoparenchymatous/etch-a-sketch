@@ -1,4 +1,5 @@
 function main() {
+   drawGrid();
    const gridSizeButton = document.querySelector("#set-grid-size");
    let gridSize = 16;
    gridSizeButton.addEventListener("click", function() {
@@ -7,13 +8,13 @@ function main() {
       if (gridSize < 1) gridSize = 1;
 
       drawGrid(gridSize);
-   }
+   });
 }
 
 
 function drawGrid(size = 16) {
    const gridContainer = document.querySelector("#container");
-
+   gridContainer.innerHTML="";
    for (let i = 0; i < size * size; i++) {
       const box = document.createElement("div");
       box.classList.add("grid-box");
