@@ -1,9 +1,9 @@
 const gridSize = 16;
 
-function drawGrid() {
+function drawGrid(size) {
    const gridContainer = document.querySelector("#container");
 
-   for (let i = 0; i < gridSize * gridSize; i++) {
+   for (let i = 0; i < size * size; i++) {
       const box = document.createElement("div");
       box.classList.add("grid-box");
       gridContainer.appendChild(box);
