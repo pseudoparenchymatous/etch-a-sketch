@@ -15,6 +15,7 @@ function main() {
 function drawGrid(size = 16) {
    const gridContainer = document.querySelector("#container");
    gridContainer.innerHTML="";
+   gridContainer.style = `grid-template-columns: repeat(${size}, 1fr)`;
    for (let i = 0; i < size * size; i++) {
       const box = document.createElement("div");
       box.classList.add("grid-box");
