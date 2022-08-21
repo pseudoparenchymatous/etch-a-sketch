@@ -13,4 +13,6 @@
    border: solid blue 1px;
 }
 
-
+.red-bg {
+   background-color: red;
+}
