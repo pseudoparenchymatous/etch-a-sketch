@@ -1,7 +1,15 @@
 function main() {
    const gridSizeButton = document.querySelector("#set-grid-size");
-   gridSizeButton.addEventListener("click", promptGridSize);
+   let gridSize = 16;
+   gridSizeButton.addEventListener("click", function() {
+      gridSize = Number(window.prompt("Grid size (max 100)", ""));
+      if (gridSize > 100) gridSize = 100;
+      if (gridSize < 1) gridSize = 1;
+
+      drawGrid(gridSize);
+   }
 }
+
 
 function drawGrid(size = 16) {
    const gridContainer = document.querySelector("#container");
